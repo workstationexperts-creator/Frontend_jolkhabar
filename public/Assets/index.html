@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Security Enhancement: Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+    <!-- Security Enhancement: HSTS -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <!-- Security Enhancement: Prevent MIME type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- Security Enhancement: Prevent clickjacking -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <!-- Security Enhancement: XSS Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <!-- Security Enhancement: Referrer Policy -->
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <title>JOLKHABAR - Authentic Bengali Food Products | Traditional Bengali Delicacies</title>
+    <meta name="description" content="Discover authentic Bengali food products at JOLKHABAR. From Achar to Kasundi, shop traditional Bengali delicacies, sweets, and more. Available on Amazon, Flipkart & other platforms." />
+    <meta name="keywords" content="Bengali food, Achar, Kasundi, Aamsotto, Chanachur, Bengali sweets, traditional Bengali food, Bengali delicacies" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="JOLKHABAR - Authentic Bengali Food Products" />
+    <meta property="og:description" content="Shop authentic Bengali food products and traditional delicacies at JOLKHABAR." />
+    <meta property="og:image" content="./Assets/jolbanner.jpg" />
+    <meta property="og:url" content="https://jolkhabar.com" />
+    <link rel="canonical" href="https://jolkhabar.com" />
+
+     <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="icon" href="./favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#f05a28">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <link rel="stylesheet" href="./Styles/style5.css" />
+    <link rel="stylesheet" href="./Styles/search.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CGR4M4S3L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3CGR4M4S3L');
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "JOLKHABAR",
+      "description": "Authentic Bengali Food Products and Traditional Delicacies",
+      "url": "https://jolkhabar.com",
+      "logo": "./Assets/jolkhabr.png",
+      "sameAs": [
+        "https://www.facebook.com/amaderjolkhabar",
+        "https://www.youtube.com/@Bangalirjolkhabar",
+        "https://www.instagram.com/bangalirjolkhabar"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-XXX-XXX-XXXX",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+    
+    <!-- custom js file link  -->
+    <script src="./js/backToTop.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="sidebar-active" />
+      <label for="sidebar-active" class="open-sidebar-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="32"
+          viewBox="0 -960 960 960"
+          width="32"
+        >
+          <path
+            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+          />
+        </svg>
+      </label>
+      <label id="overlay" for="sidebar-active"></label>
+
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32"
+            viewBox="0 -960 960 960"
+            width="32"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </label>
+
+        <!-- Home link positioned at the left -->
+        <a class="home-link" href="./index.html">Home</a>
+        
+        <!-- Search container positioned after Home button -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search products...">
+          <div id="search-results"></div>
+        </div>
+        <a href="./Products/AboutUs.html">About Us</a>
+        <a href="./Products/Product1.html">Achar</a>
+        <a href="./Products/Product2.html">Aamsotto</a>
+        <a href="./Products/Product3.html">Chanachur</a>
+        <a href="./Products/Product4.html">Chatni</a>
+        <a href="./Products/Product5.html">Kasundi</a>
+        <a href="./Products/Product7.html">Rice</a>
+        <a href="./Products/Product6.html">Delicacies</a>
+        <a href="./Products/Product8.html">Dashakarma</a>
+        
+      </div>
+    </nav>
+    <!-- Section with picture and Explore button -->
+    <div class="container">
+      <div class="banner-section">
+        <img src="./images/WebsiteLongBanners/Jolkhabar Homepage Main.jpg" alt="Banner" class="background-image">
+      </div>
+      <a class="achar-section clickable-section" href="./Products/Product1.html" aria-label="Explore Achar">
+        <img src="./Assets/aachar.png" alt="Achar" class="achar-image">
+      </a>
+      <a class="aamsotto-section clickable-section" href="./Products/Product2.html" aria-label="Explore Aamsotto">
+        <img src="./images/WebsiteSquarebanners/Aamsotto square.jpg" alt="Aamsotto" class="aamsotto-image">
+      </a>
+      <a class="chanachur-section clickable-section" href="./Products/Product3.html" aria-label="Explore Chanachur">
+        <img src="./images/WebsiteSquarebanners/Chanachur square.jpg" alt="Chanachur" class="chanachur-image">
+      </a>
+      <a class="chatni-section clickable-section" href="./Products/Product4.html" aria-label="Explore Chatni">
+        <img src="./images/WebsiteSquarebanners/Chatni square.jpg" alt="Chatni" class="chatni-image">
+      </a>
+      <a class="kasundi-section clickable-section" href="./Products/Product5.html" aria-label="Explore Kasundi">
+        <img src="./Assets/kasundiii.png" alt="Kasundi" class="kasundi-image">
+      </a>
+      <a class="chal-section clickable-section" href="./Products/Product7.html" aria-label="Explore Rice">
+        <img src="./images/WebsiteLongBanners/Traditional culinary long banner.jpg" alt="Rice" class="nolen-gur-image">
+      </a>
+      <a class="nolen-gur-section clickable-section" href="./Products/Product6.html" aria-label="Explore Nolen Gur">
+        <img src="./images/WebsiteLongBanners/Bengali Delicacy long banner.jpg" alt="Nolen Gur" class="nolen-gur-image">
+      </a>
+      <!-- DoshoKorma Section -->
+      <a class="doshokorma-section clickable-section" href="./Products/Product8.html" aria-label="Explore Dashakarma">
+        <img src="./images/WebsiteLongBanners/Dashakarma homepage long banner.jpg" alt="Dashakarma" class="doshokorma-image">
+      </a>
+      
+      <!-- <div class="nolen-gur-section1">
+        <img src="./Assets/about.png" alt="Nolen Gur" class="nolen-gur-image1">
+      </div> -->
+    </div>
+    <div class="available-at-section">
+      <h2>Available At</h2>
+      <div class="logo-container">
+        <img src="./Assets/BlinkitLogo.png" alt="Blinkit" class="available-logo">
+        <img src="./Assets/BigbasketLOgo.png" alt="Bigbasket" class="available-logo">
+        <img src="./Assets/Instamart logo.avif" alt="Swiggy Instamart" class="available-logo">
+        <img src="./Assets/ZeptoLogo.png" alt="Zepto" class="available-logo">
+        <img src="./Assets/AmazonLogo.png" alt="Amazon" class="available-logo">
+        <img src="./Assets/FlipkartLogo.png" alt="Flipkart" class="available-logo">
+        <img src="./Assets/EtsyLogo.png" alt="Etsy" class="available-logo">
+        <img src="./Assets/ebay-icon-2048x2048-2vonydav.png" alt="Ebay" class="available-logo">
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div>
+          <div class="footer-logos">
+            <a href="https://www.facebook.com/amaderjolkhabar" target="_blank" rel="noopener noreferrer">
+              <img src="facebook-icon.png" alt="Facebook" onerror="this.style.display='none'">
+            </a>
+            <a href="https://www.instagram.com/bangalirjolkhabar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank" rel="noopener noreferrer">
+              <img src="instagram-icon.png" alt="Instagram" onerror="this.style.display='none'">
+            </a>
+            <a href="https://www.youtube.com/@Bangalirjolkhabar" target="_blank" rel="noopener noreferrer">
+              <img src="YoutubeLogo.png" alt="YouTube" onerror="this.style.display='none'">
+            </a>
+          </div>
+          <div class="brand-footer">
+            <img src="images/Contact_logos/Siblings_logo.png" alt="JolKhabar Logo" width="120" 
+                 onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="footer-middle" style="text-align: center; align-self: center;">
+          <a href="./Products/Places.html" class="availability-btn" style="display: inline-block; margin-top: 10px;">Places to find us</a>
+        </div>
+
+        <div class="help">
+          <strong>Help & Support</strong>
+          <span>
+            <img src="images/Contact_logos/Gmap Logo.png" class="contact-icon" alt="Location" onerror="this.style.display='none'">
+            Kolkata, West Bengal
+          </span><br>
+          <a href="tel:+919674627460">
+            <img src="images/Contact_logos/Phone_logo.png" class="contact-icon" alt="Call">
+            +91 96746 27460
+          </a><br>
+          <a href="https://wa.me/919674627460" target="_blank" rel="noopener noreferrer">
+            <img src="images/Contact_logos/Whatsapp_logo.png" class="contact-icon" alt="WhatsApp">
+            +91 96746 27460
+          </a><br>
+          <a href="mailto:Contact@jolkhabarstore.com">
+            <img src="images/Contact_logos/Email_logo.png" class="contact-icon" alt="Email">
+            Contact@jolkhabarstore.com
+          </a><br>
+          &copy; 2025 Siblings Exims Pvt. Ltd. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" aria-label="Back to top" style="display: none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+      </svg>
+    </a>
+    
+    <!-- Scripts -->
+    <script src="./js/products.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/backToTop.js"></script>
+  </body>
+</html>
+

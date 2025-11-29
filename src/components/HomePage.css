@@ -1,0 +1,162 @@
+/* CATEGORY GRID */
+.category-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* COMMON CARD */
+.category-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fdf6e4;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* SQUARE category */
+.category-card.square {
+  aspect-ratio: 1 / 1;
+}
+
+/* WIDE category (100% full width) */
+.category-card.wide {
+  grid-column: span 2;
+  width: 100%;
+  height: auto;
+
+}
+
+/* IMAGE FIX → No Chopping */
+.category-image {
+  width: 100%;
+  height: auto;
+  background-color: #fff6e0;
+  
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .category-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card.wide {
+    grid-column: span 1;
+  }
+
+  .category-card.square {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+
+/* Banner Section on Homepage */
+.banner-section {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.banner-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+.banner-overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.banner-overlay h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.banner-overlay p {
+    border: 1px solid white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.2);
+    margin-top: 0.5rem;
+}
+
+/* --- New 'Available At' Section Styles --- */
+.available-at-section {
+    background-color: #fdfaf1; /* Beige background from your design */
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.available-at-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    color: #4a5568;
+}
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.available-logo-wrapper {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 80px;
+}
+
+.available-logo {
+    max-width: 100%;
+    max-height: 50px;
+    object-fit: contain;
+}
+
+/* Smooth zoom effect on hover for ALL category images */
+.category-card:hover img {
+    transform: scale(1.06);
+}
+
+.category-card img {
+    transition: transform 0.4s ease-in-out;
+}

@@ -1,0 +1,458 @@
+/* ADMIN HEADER */
+.admin-section-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #f8f0db;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+
+/* NAV WRAPPER */
+.admin-nav {
+  max-width: 1400px;
+  height: 72px;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LEFT – HOME only */
+.admin-nav-left {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* CENTER – search + admin links */
+.admin-nav-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+
+/* RIGHT – admin user */
+.admin-nav-right {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Search */
+.admin-search-bar {
+  display: flex;
+}
+
+.admin-search-input {
+  padding: 8px 14px;
+  width: 200px;
+  border-radius: 8px;
+  border: 1px solid #d9c7a3;
+  background: #faf1d7;
+  font-size: 14px;
+}
+
+/* Admin links */
+.admin-nav-link {
+  font-weight: 600;
+  color: #3d342f;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+  font-size: 15px;
+}
+
+.admin-nav-link:hover {
+  color: #c77f20;
+}
+
+/* Admin dropdown */
+.admin-user-dropdown {
+  position: relative;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.admin-user-dropdown:hover { 
+  background: #f1e2c0; 
+}
+
+.admin-dropdown-menu {
+  position: absolute;
+  background: white;
+  top: 45px;
+  right: 0;
+  width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+  overflow: hidden;
+}
+
+.admin-dropdown-menu.show { 
+  display: block; 
+}
+
+.admin-dropdown-link {
+  display: block;
+  padding: 12px 16px;
+  color: #3d342f;
+  text-decoration: none;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.admin-dropdown-link:hover {
+  background: #f5f5f5;
+}
+
+/* MOBILE */
+.admin-menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #3d342f;
+  padding: 8px;
+  display: none;
+}
+
+.admin-nav-links {
+  display: none;
+}
+
+.admin-mobile-only {
+  display: none;
+}
+
+.admin-overlay {
+  display: none;
+}
+
+/* MOBILE MODE */
+@media (max-width: 950px) {
+  .admin-nav {
+    padding: 0 15px;
+    height: 60px;
+  }
+  
+  .admin-menu-toggle {
+    display: block;
+  }
+  
+  .admin-nav-left {
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  .admin-home-link {
+    display: none;
+  }
+  
+  .admin-nav-center,
+  .admin-nav-right {
+    display: none;
+  }
+  
+  .admin-nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 280px;
+    background: #fdf6e4;
+    padding: 80px 25px 25px 25px;
+    gap: 0;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    z-index: 1001;
+  }
+  
+  .admin-nav-links.open {
+    right: 0;
+  }
+  
+  .admin-nav-links a,
+  .admin-nav-links button {
+    color: #3d342f;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 0;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.2s;
+    border-bottom: 1px solid #f1e2c0;
+  }
+  
+  .admin-nav-links a:hover,
+  .admin-nav-links button:hover {
+    color: #c77f20;
+  }
+  
+  .admin-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3d342f;
+    padding: 4px 8px;
+  }
+  
+  .admin-mobile-only {
+    display: flex !important;
+  }
+  
+  .admin-search-input.mobile {
+    width: 100%;
+    background: white;
+  }
+  
+  .admin-search-bar.admin-mobile-only {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f1e2c0;
+    margin-bottom: 8px;
+  }
+  
+  .admin-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+}
+
+/* Body padding for fixed header */
+body {
+  padding-top: 72px;
+}
+
+@media (max-width: 950px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+/* Main container for the admin dashboard sections */
+.admin-section {
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.admin-section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Form Styles */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.admin-form h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.admin-form input,
+.admin-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* List of items (products, categories) */
+.admin-list h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.admin-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-list-item:last-child {
+    border-bottom: none;
+}
+
+.item-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Button Styles */
+.button-danger {
+    padding: 0.5rem 1rem;
+    background-color: #ef4444;
+    color: white;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+}
+.button-danger:hover { background-color: #dc2626; }
+
+.button-edit {
+    padding: 0.5rem 1rem;
+    background-color: #f59e0b;
+    color: white;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+}
+.button-edit:hover { background-color: #d97706; }
+
+.button-secondary {
+    padding: 0.5rem 1rem;
+    background-color: #6b7280;
+    color: white;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+}
+.button-secondary:hover { background-color: #4b5563; }
+
+/* Tab Styles */
+.admin-tabs {
+    display: flex;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    padding: 1rem 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6b7280;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+}
+
+.tab-button.active {
+    color: #4f46e5;
+    border-bottom-color: #4f46e5;
+}
+
+/* Shipment Manager Styles */
+.shipment-list {
+    margin-top: 1.5rem;
+}
+
+.shipment-card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+.shipment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.shipment-header h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.shipment-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: #e5e7eb;
+    color: #374151;
+    text-transform: capitalize;
+}
+.status-new, .status-processing, .status-pickup-scheduled {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+.status-shipped, .status-out-for-delivery {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+.status-delivered {
+    background-color: #dcfce7;
+    color: #166534;
+}
+.status-canceled, .status-rto-initiated {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.shipment-details p {
+    margin: 0.5rem 0;
+    color: #4b5563;
+}
+
+.shipment-footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: right;
+}
+
+.shipment-footer .button.disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+}
